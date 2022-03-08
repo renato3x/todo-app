@@ -31,8 +31,23 @@ public class ToDoDaoImpl implements Dao<ToDo, Integer> {
   }
 
   @Override
-  public void deleteById(Integer integer) {
+  public void deleteById(Integer id) {
+    EntityManager manager = entityManager();
 
+    try {
+      ToDo todo = manager.find(ToDo.class, id);
+
+      if (todo != null) {
+        manager.getTransaction().begin();
+        manager.remove(todo);
+        manager.getTransaction().commit();
+      }
+    } catch (Exception error) {
+      manager.getTransaction().rollback();
+      throw new RuntimeException("Cannot delete ToDo");
+    } finally {
+      manager.close();
+    }
   }
 
   @Override

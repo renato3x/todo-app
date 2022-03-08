@@ -9,5 +9,8 @@ public class Main {
 
     Dao<ToDo, Integer> dao = DaoFactory.createToDoDao();
     dao.insert(new ToDo(null, "Study Angular"));
+    System.out.println("Todo created!");
+    dao.deleteById(1);
+    System.out.println("Todo deleted!");
   }
 }

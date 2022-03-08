@@ -25,6 +25,8 @@ public class ToDo {
   @Column(name = "updated_at")
   private Date updatedAt;
 
+  public ToDo() {}
+
   public ToDo(Integer id, String subject) {
     this.id = id;
     this.subject = subject;

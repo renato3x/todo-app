@@ -2,6 +2,8 @@ package dao.impl;
 
 import dao.Dao;
 import entities.ToDo;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -52,7 +54,9 @@ public class ToDoDaoImpl implements Dao<ToDo, Integer> {
 
   @Override
   public List<ToDo> all() {
-    return null;
+    EntityManager manager = entityManager();
+
+    return manager.createQuery("FROM todos", ToDo.class).getResultList();
   }
 
   private EntityManager entityManager() {

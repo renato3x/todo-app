@@ -1,16 +1,24 @@
 package application;
 
-import dao.Dao;
-import dao.facotry.DaoFactory;
-import entities.ToDo;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+import java.util.Objects;
+
+public class Main extends Application {
+  @Override
+  public void start(Stage stage) throws Exception {
+    Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/views/main.fxml"))));
+
+    stage.setScene(scene);
+    stage.setTitle("ToDo App");
+    stage.setResizable(false);
+    stage.show();
+  }
+
   public static void main(String[] args) {
-
-    Dao<ToDo, Integer> dao = DaoFactory.createToDoDao();
-    dao.insert(new ToDo(null, "Study Angular"));
-    System.out.println("Todo created!");
-    dao.deleteById(1);
-    System.out.println("Todo deleted!");
+    launch(args);
   }
 }

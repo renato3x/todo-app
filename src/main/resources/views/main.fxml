@@ -8,6 +8,6 @@
 <AnchorPane id="main" prefHeight="600.0" prefWidth="300.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <HBox styleClass="container">
       <Label id="main-label" text="Tasks" />
-      <Button id="add" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="+" />
+      <Button id="add" mnemonicParsing="false" text="+" />
    </HBox>
 </AnchorPane>

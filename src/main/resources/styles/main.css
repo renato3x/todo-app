@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
-  -fx-primary-cyan: #065a60;
-  -fx-primary-red: #490000;
-  -fx-primary-green: #0a5c36;
+  -fx-primary-yellow: #ffd100;
+  -fx-primary-black: #202020;
+  -fx-color-bg: linear-gradient(to bottom, #262626, #1f1f1f, #1d1d1d);
 }
 
 #main {
-  -fx-background-color: linear-gradient(to bottom, #262626, #1f1f1f, #1d1d1d, #181818);
+  -fx-background-color: -fx-color-bg;
 }
 
 .container {
   -fx-alignment: center;
   -fx-pref-width: 300px;
   -fx-pref-height: 50px;
+  -fx-spacing: 180px;
+  -fx-padding: 10px 0;
 }
 
 #main-label {
-  -fx-text-fill: #fff;
+  -fx-text-fill: -fx-primary-yellow;
   -fx-font-family: 'Poppins', sans-serif;
   -fx-font-size: 20px;
 }
@@ -29,7 +31,7 @@
   -fx-min-width: 25px;
   -fx-min-height: 25px;
   -fx-background-radius: 50%;
-  -fx-background-color: -fx-primary-cyan;
-  -fx-text-fill: #fff;
+  -fx-background-color: -fx-primary-yellow;
+  -fx-text-fill: -fx-primary-black;
   -fx-cursor: hand;
 }

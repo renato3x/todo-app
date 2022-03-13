@@ -12,8 +12,10 @@ public class Main extends Application {
   public void start(Stage stage) throws Exception {
     Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("/views/main.fxml"))));
 
+    scene.getStylesheets().add(Main.class.getResource("/styles/main.css").toExternalForm());
+
     stage.setScene(scene);
-    stage.setTitle("ToDo App");
+    stage.setTitle("My ToDo");
     stage.setResizable(false);
     stage.show();
   }

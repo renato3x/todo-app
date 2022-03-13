@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+Label {
+  -fx-text-fill: #fff;
+  -fx-font-family: 'Poppins', sans-serif;
+}
+
+#main-container {
+  -fx-background-color: linear-gradient(to bottom, #262626, #1f1f1f, #1d1d1d, #181818);
+}

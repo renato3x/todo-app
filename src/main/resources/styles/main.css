@@ -1,10 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-Label {
-  -fx-text-fill: #fff;
-  -fx-font-family: 'Poppins', sans-serif;
+* {
+  -fx-primary-cyan: #065a60;
+  -fx-primary-red: #490000;
+  -fx-primary-green: #0a5c36;
 }
 
-#main-container {
+#main {
   -fx-background-color: linear-gradient(to bottom, #262626, #1f1f1f, #1d1d1d, #181818);
+}
+
+.container {
+  -fx-alignment: center;
+  -fx-pref-width: 300px;
+  -fx-pref-height: 50px;
+}
+
+#main-label {
+  -fx-text-fill: #fff;
+  -fx-font-family: 'Poppins', sans-serif;
+  -fx-font-size: 20px;
+}
+
+#add {
+  -fx-font-family: 'Poppins', sans-serif;
+  -fx-font-size: 15px;
+  -fx-padding: 0;
+  -fx-min-width: 25px;
+  -fx-min-height: 25px;
+  -fx-background-radius: 50%;
+  -fx-background-color: -fx-primary-cyan;
+  -fx-text-fill: #fff;
+  -fx-cursor: hand;
 }

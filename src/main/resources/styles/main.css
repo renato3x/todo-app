@@ -6,16 +6,20 @@
   -fx-color-bg: linear-gradient(to bottom, #262626, #1f1f1f, #1d1d1d);
 }
 
-#main {
+/* global bg */
+#main, #todos-container {
   -fx-background-color: -fx-color-bg;
 }
 
 .container {
-  -fx-alignment: center;
   -fx-pref-width: 300px;
+}
+
+/* header styles */
+#header-container {
   -fx-pref-height: 50px;
   -fx-spacing: 180px;
-  -fx-padding: 10px 0;
+  -fx-alignment: center;
 }
 
 #main-label {
@@ -34,4 +38,13 @@
   -fx-background-color: -fx-primary-yellow;
   -fx-text-fill: -fx-primary-black;
   -fx-cursor: hand;
+}
+
+/* main content styles */
+.scroll, #todos-container {
+  -fx-pref-height: 550px;
+}
+
+.scroll {
+  -fx-opacity: 0;
 }

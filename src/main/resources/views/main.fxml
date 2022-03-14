@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane id="main" prefHeight="600.0" prefWidth="300.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <HBox styleClass="container">
+   <HBox id="header-container" styleClass="container">
       <Label id="main-label" text="Tasks" />
-      <Button id="add" mnemonicParsing="false" text="+" />
+      <Button id="add" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="+" />
    </HBox>
+   <ScrollPane hbarPolicy="NEVER" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+      <VBox id="todos-container" prefHeight="200.0" prefWidth="100.0" styleClass="container" />
+      <styleClass>
+         <String fx:value="container" />
+         <String fx:value="scroll" />
+      </styleClass>
+   </ScrollPane>
 </AnchorPane>
